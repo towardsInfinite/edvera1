@@ -99,6 +99,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeButton = document.querySelector('.modal-close');
   const diagnosticForm = document.getElementById('diagnostic-form');
 
+  // --- Age Button Logic ---
+  const ageButtons = document.querySelectorAll('.age-btn');
+  const ageInput = document.getElementById('learner-age');
+
+  if (ageButtons.length > 0 && ageInput) {
+    ageButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        ageButtons.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        ageInput.value = btn.dataset.value;
+      });
+    });
+  }
+
   if (modal && openButtons.length > 0) {
     // Open Modal
     function openModal(e) {
@@ -141,9 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Basic Validation
         const parentName = document.getElementById('parent-name').value;
         const email = document.getElementById('email').value;
-        const contact = document.getElementById('contact-number').value;
+        // Contact number removed
 
-        if (!parentName || !email || !contact) {
+        if (!parentName || !email) {
           alert('Please fill in all mandatory fields.');
           return;
         }
@@ -152,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = {
           parentName,
           email,
-          contact,
+          contact: "Email Preferred",
           learnerName: document.getElementById('learner-name').value,
           learnerAge: document.getElementById('learner-age').value,
           comments: document.getElementById('comments').value,

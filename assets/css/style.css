@@ -872,3 +872,35 @@ img {
         transform: scale(1.2);
     }
 }
+
+/* Diagnostic Modal Age Buttons */
+.age-btn {
+    padding: 0.8rem 0.5rem;
+    background: var(--bg-page);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.age-btn:hover {
+    border-color: var(--accent-amber);
+    background: rgba(212, 177, 90, 0.05);
+}
+
+.age-btn.selected {
+    background-color: var(--accent-amber);
+    color: #0E0E12;
+    border-color: var(--accent-amber);
+    font-weight: 600;
+}
+
+/* Ensure 4 columns look good on mobile within the modal */
+@media (max-width: 480px) {
+    .age-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}

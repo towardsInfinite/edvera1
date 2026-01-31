@@ -7,7 +7,7 @@
     <meta name="robots" content="index, follow">
     <title>Parent Guide | Philosophy & Expectations | EDVERA</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 
 <body>
@@ -92,6 +92,51 @@
                 </div>
             </div>
 
+            <!-- Accordion Item 4 (New) -->
+            <div class="accordion-item reveal-on-scroll delay-3">
+                <button class="accordion-header" aria-expanded="false">
+                    <span class="accordion-title">Concept Over Completion</span>
+                    <span class="accordion-icon"></span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        We prioritize deep conceptual understanding over the superficial completion of projects. A
+                        finished project is meaningless if the student cannot explain the underlying logic. We focus on
+                        building robust skills that last, not just checking boxes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 5 (New) -->
+            <div class="accordion-item reveal-on-scroll delay-3">
+                <button class="accordion-header" aria-expanded="false">
+                    <span class="accordion-title">Small Batches, Undivided Attention</span>
+                    <span class="accordion-icon"></span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        We intentionally reject the mass-market education model. By maintaining small cohorts or 1:1
+                        mentorship, we ensure every student receives the focused guidance they deserve. Our goal is not
+                        scale; it is to equip your child with a future-ready intellectual foundation.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 6 (New) -->
+            <div class="accordion-item reveal-on-scroll delay-3">
+                <button class="accordion-header" aria-expanded="false">
+                    <span class="accordion-title">Problem Solving as a Mindset</span>
+                    <span class="accordion-icon"></span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        We use coding to teach the fundamental skill of Problem Solving. We believe that the ability to
+                        deconstruct complex challenges is universally applicable. Whatever field your child
+                        chooses—medicine, law, or engineering—this logical framework will be their greatest asset.
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center" style="margin-top: 5rem;">
                 <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1.5rem;">Ready to begin?</h3>
                 <a href="#" class="btn btn-primary js-open-diagnostic">Book Free Diagnostic Session</a>
@@ -147,26 +192,30 @@
                     <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="contact-number" class="form-label">Contact Number (WhatsApp) <span
-                            class="required">*</span></label>
-                    <input type="tel" id="contact-number" class="form-input" placeholder="+91 XXXXX XXXXX" required>
-                    <small style="display: block; margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">Preferably
-                        WhatsApp for coordination.</small>
+                <!-- Removed Contact Number as per request -->
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label class="form-label">Select Child's Age</label>
+                    <input type="hidden" id="learner-age" name="learner-age">
+                    <div class="age-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem;">
+                        <button type="button" class="age-btn" data-value="5">Age 5</button>
+                        <button type="button" class="age-btn" data-value="6">Age 6</button>
+                        <button type="button" class="age-btn" data-value="7">Age 7</button>
+                        <button type="button" class="age-btn" data-value="8">Age 8</button>
+                        <button type="button" class="age-btn" data-value="9">Age 9</button>
+                        <button type="button" class="age-btn" data-value="10">Age 10</button>
+                        <button type="button" class="age-btn" data-value="11">Age 11</button>
+                        <button type="button" class="age-btn" data-value="12">Age 12</button>
+                        <button type="button" class="age-btn" data-value="13">Age 13</button>
+                        <button type="button" class="age-btn" data-value="14">Age 14</button>
+                        <button type="button" class="age-btn" data-value="15+">Age 15+</button>
+                    </div>
                 </div>
 
-                <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 2rem 0;">
-
-                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
-                    <div class="form-group">
-                        <label for="learner-name" class="form-label">Learner's Name <span
-                                class="optional">(Optional)</span></label>
-                        <input type="text" id="learner-name" class="form-input" placeholder="Child's name">
-                    </div>
-                    <div class="form-group">
-                        <label for="learner-age" class="form-label">Age <span class="optional">(Optional)</span></label>
-                        <input type="number" id="learner-age" class="form-input" placeholder="Age" min="5" max="18">
-                    </div>
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label for="learner-name" class="form-label">Learner's Name <span
+                            class="optional">(Optional)</span></label>
+                    <input type="text" id="learner-name" class="form-input" placeholder="Child's name">
                 </div>
 
                 <div class="form-group">
@@ -176,7 +225,9 @@
                         placeholder="Any specific learning goals or concerns?"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Proceed to Schedule</button>
+                <button type="submit" class="btn btn-primary"
+                    style="width: 100%; background-color: var(--accent-amber); border-color: var(--accent-amber); color: #0E0E12; font-weight: 600;">Book
+                    a Diagnostic</button>
             </form>
 
             <div id="diagnostic-success" style="display: none; text-align: center; padding: 2rem 0;">
