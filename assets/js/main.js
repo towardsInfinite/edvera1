@@ -258,4 +258,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  // --- Mobile Navigation Logic ---
+  const mobileToggle = document.querySelector('.mobile-nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', () => {
+      const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', !isExpanded);
+      navLinks.classList.toggle('active');
+      document.body.classList.toggle('nav-open'); // To control overflow if needed
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        document.body.classList.remove('nav-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 });
